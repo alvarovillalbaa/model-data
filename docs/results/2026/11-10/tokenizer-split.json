@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-10",
+  "status": "passed_for_documentation_split",
+  "source_repository": "alvarovillalbaa/model-data",
+  "source_revision": "89325b15e7c7e31f9e0eff234dbd608e387b2d1c",
+  "checks": {
+    "archived_source_byte_equality": 3,
+    "original_tokenizer_placeholder_copy": "exact",
+    "local_links": 21,
+    "whitespace": "git diff --check passed",
+    "new_repository_runtime": "planned; no pyproject, code, installed engine, or trained artifact is claimed"
+  },
+  "scope": {
+    "model_data": "Dataset/document/shard preparation and optional encoding/packing using a selected pinned tokenizer artifact",
+    "model_tokenizers": "Tokenizer training, inspection, compression, domain comparisons, special-token policy, and artifact requirements",
+    "model_distillation": "Teacher/task/response/verifier/preference contracts; linked rather than duplicated"
+  },
+  "limits": [
+    "No installs, builds, runtime tests, training, tokenizer artifact generation, model downloads, or provider calls."
+  ]
+}
