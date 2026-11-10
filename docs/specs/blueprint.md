@@ -2,7 +2,13 @@
 
 Last updated: 2026-11-10
 
-Historical design extracted from [Lab at ba67e51](https://github.com/alvarovillalbaa/lab/blob/ba67e510bab2703b1042993744ce099490221c1f/docs/specs/steps.md). The component specification owns current scope. This text does not prove implementation, current provider facts, or executed research.
+Historical data-pipeline requirements extracted from
+[Lab section 7](https://github.com/alvarovillalbaa/lab/blob/ba67e510bab2703b1042993744ce099490221c1f/docs/specs/steps.md#7-phase-3--data-pipeline).
+Current scope is owned by [the component specification](README.md). Tokenize
+and pack steps consume a selected tokenizer artifact; tokenizer training and
+comparison belong to [model-tokenizers](https://github.com/alvarovillalbaa/model-tokenizers).
+The exact previous combined document is preserved in
+[the source archive](../sources/pre-tokenizer-split/blueprint.md).
 
 # 7. Phase 3 — data pipeline
 
@@ -78,34 +84,5 @@ Your first publishable research contribution could be:
 > “A cheap multi-stage data filter that improves downstream score per training dollar.”
 
 Use DCLM-style controlled evaluation: same model, same tokens, same compute, only data filter changes. DCLM exists exactly because data curation can be studied systematically across model scales. ([DataComp][5])
-
----
-
-# 8. Phase 4 — tokenizer
-
-Train your own tokenizer, even if you later compare against an existing one.
-
-## Recommended tokenizer plan
-
-| Parameter       | Recommendation                                             |
-| --------------- | ---------------------------------------------------------- |
-| Type            | BPE or Unigram                                             |
-| Vocab size      | 32k for small models, 50k–64k for 1B+                      |
-| Training sample | 10B–50B characters from final data mix                     |
-| Special tokens  | BOS, EOS, PAD, UNK, system/user/assistant if chat          |
-| Code support    | ensure indentation and common code tokens are handled well |
-| Evaluation      | compression ratio by domain                                |
-
-Tokenizer eval table:
-
-| Dataset slice | chars/token | tokens/doc | unknown rate | notes |
-| ------------- | ----------: | ---------: | -----------: | ----- |
-| web           |             |            |              |       |
-| code          |             |            |              |       |
-| math          |             |            |              |       |
-| Spanish       |             |            |              |       |
-| tables        |             |            |              |       |
-
-Even if the final model is English-heavy, include multilingual slices in tokenizer testing so you understand the tradeoff.
 
 ---

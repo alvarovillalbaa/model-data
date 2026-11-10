@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-10",
+  "source_repository": "alvarovillalbaa/model-data",
+  "source_revision": "89325b15e7c7e31f9e0eff234dbd608e387b2d1c",
+  "history_policy": "Exact combined documents are retained under model-data/docs/sources/pre-tokenizer-split. New active scopes separate tokenizer production from dataset consumption. Destination branches are local pending publication.",
+  "file_migrations": [
+    {
+      "source_path": "docs/specs/blueprint.md",
+      "source_sha256": "289f2760d8cdaeab40df39d013716869ca16ce865fccc9cceecde3295f67b479",
+      "archive_path": "docs/sources/pre-tokenizer-split/blueprint.md",
+      "section_migrations": [
+        {
+          "heading": "# 7. Phase 3 — data pipeline",
+          "start_line": 7,
+          "end_line": 83,
+          "destination_repository": "alvarovillalbaa/model-data",
+          "destination_path": "docs/specs/blueprint.md",
+          "boundary": "Dataset pipeline; tokenize/pack consumes a selected pinned tokenizer artifact."
+        },
+        {
+          "heading": "# 8. Phase 4 — tokenizer",
+          "start_line": 84,
+          "end_line": 111,
+          "destination_repository": "alvarovillalbaa/model-tokenizers",
+          "destination_path": "docs/specs/blueprint.md",
+          "boundary": "Tokenizer training, inspection, compression, special tokens, comparisons, artifact requirements."
+        }
+      ]
+    },
+    {
+      "source_path": "docs/specs/backlog.md",
+      "source_sha256": "39d25f2c5826e3d2f703b8ed4f67b910bcaabfe7c29b7397106cf23b19e3dd0f",
+      "archive_path": "docs/sources/pre-tokenizer-split/backlog.md",
+      "section_migrations": [
+        {
+          "heading": "## Data Pipeline",
+          "start_line": 7,
+          "end_line": 28,
+          "destination_repository": "alvarovillalbaa/model-data",
+          "destination_path": "docs/specs/backlog.md"
+        },
+        {
+          "heading": "## Tokenizer",
+          "start_line": 29,
+          "end_line": 38,
+          "destination_repository": "alvarovillalbaa/model-tokenizers",
+          "destination_path": "docs/specs/backlog.md"
+        }
+      ]
+    },
+    {
+      "source_path": "data/tokenizer/README.md",
+      "source_sha256": "d462a9c76c1e5fd8828d4b3e2f44006924a811beae8aae04106e5ad8f97b20cd",
+      "archive_path": "docs/sources/pre-tokenizer-split/tokenizer-artifacts.md",
+      "destination_repository": "alvarovillalbaa/model-tokenizers",
+      "destination_path": "docs/sources/tokenizer-artifacts-original.md",
+      "active_requirements_path": "docs/specs/artifacts.md"
+    },
+    {
+      "source_path": "data/schemas/README.md",
+      "source_sha256": "24dc7bea46f1b31b79c681203af3241db4ae4f4765521a9dbcfee1bcc0ba4b54",
+      "destination_repository": "alvarovillalbaa/model-data",
+      "destination_path": "data/schemas/README.md",
+      "change": "Dataset/document/split/shard manifest scope only. Teacher/task/verifier/preference contracts explicitly link to model-distillation."
+    }
+  ]
+}
