@@ -1,5 +1,9 @@
 # model-data
 
+<!-- project-family:start -->
+> **Project family:** [AI Research Lab](https://github.com/alvarovillalbaa#ai-research-lab) · **Area:** Data preparation
+<!-- project-family:end -->
+
 Last updated: 2026-11-10
 
 Prepare versioned datasets and tokenizer artifacts for independent model consumers.
